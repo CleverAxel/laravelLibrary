@@ -1,0 +1,80 @@
+main{
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main > h1{
+    border-bottom: 1px solid var(--gray);
+    color: var(--black);
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+form > div{
+    width: 90%;
+    margin: 0 auto;
+}
+
+form label{
+    color: var(--black);
+    font-size: 21px;
+}
+
+form input{
+    width: 100%;
+    padding: 5px;
+    font-size: 17px;
+}
+
+form textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 5px;
+    font-size: 17px;
+    resize: vertical;
+}
+
+.dateInput{
+    display: flex;
+}
+
+.containAuthors{
+    max-height: 100px;
+    overflow-y: scroll;
+    display: none;
+}
+
+.containAuthors > button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: steelblue;
+    color: black;
+    margin: 0;
+    padding: 10px 5px;
+}
+
+.containAuthors > button:hover, button:focus{
+    background-color: rgb(63, 101, 132);
+}
+
+.containAuthors > button:disabled{
+    display: none;
+}
+
+.selectedAuthors{
+    margin-bottom: 10px;
+}
+
+.selectedAuthors > div{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 10px;
+}

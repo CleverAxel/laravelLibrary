@@ -1,0 +1,99 @@
+.thumbnailBook{
+    margin: 10px 0;
+    background-color: var(--lightBlue);
+    border-radius: 15px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 5px 15px -3px #000000; 
+    box-shadow: 0px 5px 15px -3px #000000;
+    padding: 5px;
+}
+
+.titleBook{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.thumbnailBook > div{
+    display: flex;
+}
+
+.thumbnailBook .informationBook{
+    width: 100%;
+
+}
+
+.tableDetails{
+    max-width: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    padding: 0;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.tableDetails th{
+    background-color: var(--black);
+    color: white;
+    font-size: 18px;
+}
+
+.tableDetails td:first-child{
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    vertical-align: middle;
+    border-right: 1px solid gray;
+    text-transform: uppercase;
+
+}
+
+.tableDetails td:nth-child(2){
+    width: 80%;
+    padding: 5px;
+}
+
+.tableDetails tr:nth-child(even){
+    background-color: rgb(226, 226, 226);
+}
+
+table h3{
+    font-size: 24px;
+}
+
+.resumeBook{
+    max-width: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.resumeBook h2{
+    background-color: var(--black);
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+    padding: 5px;
+}
+
+.resumeBook p{
+    margin: 0;
+    padding: 5px 15px;
+    background-color: #e2e2e2;
+}
+
+.thumbnailBook .containImageBook{
+    width: 45%;
+    aspect-ratio: 1 / 1;
+
+
+}
+
+.containImageBook > .imgBook{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+}

@@ -1,0 +1,24 @@
+:root{
+    --lightBlue : #CFDBD5;
+    --white : #E8EDDF;
+    --yellow : #F5CB5C;
+    --black : #242423;
+    --gray : #333533;
+}
+body{
+    margin: 0;
+    background-color: var(--white);
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
