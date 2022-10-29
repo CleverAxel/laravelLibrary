@@ -31,8 +31,8 @@ use Illuminate\Support\Arr;
                 $book->collection,
                 $book->resume,
                 $book->image,
-                self::sortAuthAndGenreById($authors),
-                self::sortAuthAndGenreById($genres)
+                $authors,
+                $genres
             );
         }
 

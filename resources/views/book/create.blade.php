@@ -1,5 +1,5 @@
 @include("layout.declareHTML", [
-        "title" => "Les bouquins",
+        "title" => "Ajouter un livre",
         "css" => [
             "./css/layout/header.css",
             "./css/book/create.css"
@@ -32,27 +32,37 @@
 
         <div>
             <div>
-                <label for="date">Date de parution :</label>
+                <label for="date">Date de parution (JOUR / MOIS / ANNÉE) :</label>
             </div>
             <div class="dateInput">
-                <input type="text" id="date" name="dateDay" placeholder="JOUR">
-                <input type="text" id="date" name="dateMonth" placeholder="MOIS">
+
+                <select name="dateDay" id="date">
+                    @for ($i = 1; $i < 32; $i++)
+                        <option>{{$i}}</option>
+                    @endfor
+                </select>
+                /
+                <select name="dateMonth" id="date">
+                    @for ($i = 1; $i < 13; $i++)
+                        <option>{{$i}}</option>
+                    @endfor
+                </select>
+                /
+
                 <input type="text" id="date" name="dateYear" placeholder="ANNÉE">
                 <input type="hidden" id="dateHidden" value="" name="dateHidden">
             </div>
         </div>
 
+
+
         <div>
             <div>
                 <label for="author">Auteur(s) du livre :</label>
             </div>
-
-            <div class="authorSelected">
-                <!------------>
-            </div>
             <div>
                 <div class="selectedAuthors">
-                    
+                         
                 </div>
                 <div class="searchAuthors">
                     <input type="text" id="searchAuthor" placeholder="Rechercher auteur" autocomplete="off">
@@ -63,6 +73,29 @@
                     @endforeach
                 </div>
             </div>
+        </div>
+
+
+
+        <div>
+            <div>
+                <label for="genre">Genre(s) du livre :</label>
+            </div>
+
+            <div>
+                <div class="selectedGenres">
+                         
+                </div>
+                <div class="searchGenres">
+                    <input type="text" id="searchGenre" placeholder="Rechercher genre" autocomplete="off">
+                </div>
+                <div class="containGenres">
+                    @foreach ($genres as $genre)
+                        <button data-index={{$loop->index}} data-id={{$genre->id}} data-name='{{$genre->name}}'>{{$genre->name}}</button>
+                    @endforeach
+                </div>
+            </div>
+            
         </div>
 
         <div>

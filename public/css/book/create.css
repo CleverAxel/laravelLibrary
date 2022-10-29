@@ -17,8 +17,10 @@ form{
 }
 
 form > div{
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0 auto 20px auto;
+    padding: 5px;
+    border-bottom: 3px solid rgb(60, 87, 109);
 }
 
 form label{
@@ -42,15 +44,22 @@ form textarea{
 
 .dateInput{
     display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
-.containAuthors{
+.dateInput > *{
+    align-self: stretch;
+    width: 100%;
+}
+
+.containAuthors, .containGenres{
     max-height: 100px;
     overflow-y: scroll;
     display: none;
 }
 
-.containAuthors > button{
+.containAuthors > button, .containGenres > button{
     cursor: pointer;
     border: none;
     outline: none;
@@ -61,20 +70,27 @@ form textarea{
     padding: 10px 5px;
 }
 
-.containAuthors > button:hover, button:focus{
+.containAuthors > button:hover, button:focus, .containGenres > button:hover, button:focus{
     background-color: rgb(63, 101, 132);
 }
 
-.containAuthors > button:disabled{
+.containAuthors > button:disabled, .containGenres > button:disabled{
     display: none;
 }
 
-.selectedAuthors{
-    margin-bottom: 10px;
-}
-
-.selectedAuthors > div{
+.selectedAuthors > div, .selectedGenres > div{
     background-color: var(--black);
     color: var(--white);
     padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.selectedAuthors > div > button, .selectedGenres > div > button{
+    margin-left: auto;
+    align-self: stretch;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background-color: var(--white);
 }
